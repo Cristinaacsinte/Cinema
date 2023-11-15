@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet author="Cristina Acsinte" id="2023-11-15-01-biglietto-create">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="biglietto"/>
+            </not>
+        </preConditions>
+        <comment>customer create</comment>
+        <createTable tableName="biglietto">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="position" type="BIGINT">
+            </column>
+            <column name="last_name" type="VARCHAR(50)">
+            </column>
+            <column name="id_sala_cinema" type="INT">
+            </column>
+            <column name="spettatore_id" type="INT">
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="id_sala_cinema" baseTableName="sala_cinema"
+                                 constraintName="fk_sala_cinema_on_biglietto" referencedColumnNames="id"
+                                 referencedTableName="biglietto"/>
+        <addForeignKeyConstraint baseColumnNames="spettatore_id" baseTableName="spettatore"
+                                 constraintName="fk_spettatore_on_biglietto" referencedColumnNames="id"
+                                 referencedTableName="biglietto"/>
+        <rollback>
+
+            <dropTable tableName="biglietto"/>
+        </rollback>
+    </changeSet>
+
+
+
+</databaseChangeLog>

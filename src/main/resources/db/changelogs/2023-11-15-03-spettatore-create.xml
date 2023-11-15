@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet author="Cristina Acsinte" id="2023-11-15-03-spettatore-create">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="spettatore"/>
+            </not>
+        </preConditions>
+        <comment>customer create</comment>
+        <createTable tableName="spettatore">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="first_name" type="VARCHAR(50)">
+            </column>
+            <column name="last_name" type="VARCHAR(50)">
+
+            </column>
+            <column name="date_of_birthe" type="DATE">
+            </column>
+            <column name="" type="VARCHAR(50)">
+            </column>
+            <column name="id_biglietto" type="int">
+            </column>
+
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="id_biglietto" baseTableName="biglietto"
+                                 constraintName="fk_biglietto_on_spettatore" referencedColumnNames="id"
+                                 referencedTableName="spettatore"/>
+        <rollback>
+
+            <dropTable tableName="spettatore"/>
+        </rollback>
+    </changeSet>
+
+
+
+</databaseChangeLog>
