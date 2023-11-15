@@ -1,14 +1,13 @@
-package service.imp;
+package euris.academy.Cinema.service.imp;
 
 import euris.academy.Cinema.Entity.Biglietto;
 import euris.academy.Cinema.Entity.SalaCinema;
-import euris.academy.Cinema.Entity.Spettatore;
 import euris.academy.Cinema.exception.IdMustBeNullException;
 import euris.academy.Cinema.exception.IdMustNotBeNullException;
+import euris.academy.Cinema.service.SalaCinemaService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.SalaCinemaRepository;
-import service.SalaCinemaService;
+import euris.academy.Cinema.repository.SalaCinemaRepository;
 
 import java.util.ArrayList;
 import java.util.List;

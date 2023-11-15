@@ -1,17 +1,18 @@
-package service.imp;
+package euris.academy.Cinema.service.imp;
 
 import euris.academy.Cinema.Entity.Biglietto;
 import euris.academy.Cinema.Entity.Spettatore;
 import euris.academy.Cinema.exception.IdMustBeNullException;
 import euris.academy.Cinema.exception.IdMustNotBeNullException;
+import euris.academy.Cinema.service.BigliettoService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.BigliettoRepository;
-import service.BigliettoService;
+import euris.academy.Cinema.repository.BigliettoRepository;
 
 import java.util.List;
 
 @Service
+
 @AllArgsConstructor
 public class BigliettoServiceImp implements BigliettoService {
     BigliettoRepository bigliettoRepository;

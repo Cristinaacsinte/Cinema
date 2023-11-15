@@ -1,15 +1,13 @@
-package service.imp;
+package euris.academy.Cinema.service.imp;
 
 import euris.academy.Cinema.Entity.Spettatore;
 import euris.academy.Cinema.exception.IdMustBeNullException;
 import euris.academy.Cinema.exception.IdMustNotBeNullException;
+import euris.academy.Cinema.service.SpettatoreService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.SpettatoreRepository;
-import service.SpettatoreService;
+import euris.academy.Cinema.repository.SpettatoreRepository;
 
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.List;
 
 @Service

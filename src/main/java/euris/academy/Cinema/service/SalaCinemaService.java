@@ -1,4 +1,4 @@
-package service;
+package euris.academy.Cinema.service;
 
 import euris.academy.Cinema.Entity.Biglietto;
 import euris.academy.Cinema.Entity.SalaCinema;

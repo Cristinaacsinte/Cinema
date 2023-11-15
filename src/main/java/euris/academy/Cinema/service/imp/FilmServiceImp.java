@@ -1,12 +1,12 @@
-package service.imp;
+package euris.academy.Cinema.service.imp;
 
 import euris.academy.Cinema.Entity.Film;
 import euris.academy.Cinema.exception.IdMustBeNullException;
 import euris.academy.Cinema.exception.IdMustNotBeNullException;
+import euris.academy.Cinema.service.FilmService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.FilmRepository;
-import service.FilmService;
+import euris.academy.Cinema.repository.FilmRepository;
 
 import java.util.List;
 

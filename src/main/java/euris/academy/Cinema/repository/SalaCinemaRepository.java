@@ -1,4 +1,4 @@
-package repository;
+package euris.academy.Cinema.repository;
 
 import euris.academy.Cinema.Entity.Biglietto;
 import euris.academy.Cinema.Entity.SalaCinema;

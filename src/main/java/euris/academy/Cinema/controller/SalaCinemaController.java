@@ -1,8 +1,6 @@
 package euris.academy.Cinema.controller;
 
-import euris.academy.Cinema.DTO.FilmDTO;
 import euris.academy.Cinema.DTO.SalaCinemaDTO;
-import euris.academy.Cinema.Entity.Film;
 import euris.academy.Cinema.Entity.SalaCinema;
 import euris.academy.Cinema.exception.IdMustBeNullException;
 import euris.academy.Cinema.exception.IdMustNotBeNullException;
@@ -10,7 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import service.SalaCinemaService;
+import euris.academy.Cinema.service.SalaCinemaService;
 
 import java.util.List;
 
